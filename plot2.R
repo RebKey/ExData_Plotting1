@@ -37,7 +37,7 @@ par(mfrow = c(1,1))
 par(mar=c(3.1,5.1,2.1,2.1))
 
 #create the line plot (IS NOT on-screen)
-with(data, plot(DateTime, Global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type = "l", lwd = 1.5 ))
+with(DataSet, plot(DateTime, Global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type = "l", lwd = 1.5 ))
 
 #copy the on-screen plot and give it a file name for saving
 #the default of png graphs is 480 x 480 pixels

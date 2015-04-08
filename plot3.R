@@ -43,10 +43,10 @@ par(mfrow = c(1,1))
 par(mar=c(3.1,5.1,2.1,2.1))
 
 #create the multi-line graph
-with(data, {plot(DateTime, Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n")
-               with(subset(data), points(DateTime, Sub_metering_1, type = "l"))
-               with(subset(data), points(DateTime, Sub_metering_2, type = "l", col = "red"))
-               with(subset(data), points(DateTime, Sub_metering_3, type = "l", col = "blue"))
+with(DataSet, {plot(DateTime, Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n")
+               with(subset(DataSet), points(DateTime, Sub_metering_1, type = "l"))
+               with(subset(DataSet), points(DateTime, Sub_metering_2, type = "l", col = "red"))
+               with(subset(DataSet), points(DateTime, Sub_metering_3, type = "l", col = "blue"))
                legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), 
                     col = c("black", "red", "blue"), lty = 1, lwd = 1)
             })

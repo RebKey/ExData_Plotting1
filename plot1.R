@@ -35,7 +35,7 @@ par(mfrow = c(1,1))
 par(mar=c(5.1,5.1,4.1,2.1))
 
 #create the histogram (on-screen)
-with(data, hist(Global_active_power, xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "blue"))
+with(DataSet, hist(Global_active_power, xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "blue"))
 
 #copy the on-screen plot and give it a file name for saving
 #the default of png graphs is 480 x 480 pixels

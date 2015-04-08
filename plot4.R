@@ -42,16 +42,16 @@ par(mfrow = c(2,2))
 par(mar=c(4.1,4.1,1.1,1.1))
 
 #create the each plot, which will be placed in the multi-panel layout
-with(data, {
-          plot(DateTime, Global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type = "l", lwd = 1 )
+with(DataSet, {
+          plot(DateTime, Global_active_power, xlab = "", ylab = "Global Active Power", type = "l", lwd = 1 )
           plot(DateTime, Voltage, type = "l", lwd = 1)
           {plot(DateTime, Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n")
-               with(subset(data), points(DateTime, Sub_metering_1, type = "l"))
-               with(subset(data), points(DateTime, Sub_metering_2, type = "l", col = "red"))
-               with(subset(data), points(DateTime, Sub_metering_3, type = "l", col = "blue"))
+               with(subset(DataSet), points(DateTime, Sub_metering_1, type = "l"))
+               with(subset(DataSet), points(DateTime, Sub_metering_2, type = "l", col = "red"))
+               with(subset(DataSet), points(DateTime, Sub_metering_3, type = "l", col = "blue"))
                legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), bty = "n",
                col = c("black", "red", "blue"), lty = 1, lwd = 1)}
-          plot(DateTime, Global_reactive_power, type = "l", lwd = 1 )     
+          plot(DateTime, Global_reactive_power, type = "l", lwd = 1)     
           })
 
 #finsih saving the plots to the output by using the dev.off command
